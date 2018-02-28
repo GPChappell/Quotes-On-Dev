@@ -5,6 +5,9 @@
 		</label>
 		<button class="search-submit">
 			<?php echo esc_html( 'Search' ); ?>
+			<span class="icon-search">
+				<i class="fa fa-search"></i>
+			</span>
 		</button>
 	</fieldset>
 </form>
