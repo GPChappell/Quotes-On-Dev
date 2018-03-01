@@ -61,7 +61,7 @@ gulp.task('browser-sync', function() {
   ];
 
   browserSync.init(files, {
-    proxy: 'localhost:3000/QuotesOnDev'
+    proxy: 'localhost/QuotesOnDev'
   });
 
   gulp.watch(files).on('change', browserSync.reload);

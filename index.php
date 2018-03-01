@@ -12,16 +12,12 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<div class="fa-quote"><i class="fa fa-quote-left fa-5x"></i></div>
-
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
 
 			<?php endwhile; ?>
-
-			<div class="fa-quote"><i class="fa fa-quote-right fa-5x"></i></div>
 
 		<?php else : ?>
 

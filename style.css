@@ -672,6 +672,24 @@ object {
         border-right: none; }
 
 /* Front Page */
+.post {
+  margin-top: 3rem; }
+  @media (min-width: 1080px) {
+    .post {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .post .fa-quote {
+    display: none;
+    width: 200px; }
+    @media (min-width: 1080px) {
+      .post .fa-quote {
+        display: block; } }
+  .post .entry-content {
+    margin: 0; }
+    .post .entry-content p {
+      margin: 0; }
+
 @media (min-width: 1080px) {
   #new-quote-button {
     display: block;
@@ -679,6 +697,12 @@ object {
 
 .fa-quote {
   color: #00cc00; }
+  .fa-quote:first-of-type {
+    padding-right: 2rem; }
+  .fa-quote:last-of-type {
+    padding-left: 2rem; }
+  .fa-quote .fa {
+    font-size: 8rem; }
 
 /* All Archives Page */
 /* Submit a Quote Page */

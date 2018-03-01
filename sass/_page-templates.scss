@@ -10,8 +10,27 @@
     width: $base__content-area-width;
     margin: 0 auto;
   }
-
 }
+
+// .site-content {
+
+//   &:before,
+//   &:after {
+//     color: $color__brand-green;
+//     font-family: FontAwesome;
+//     font-size: 125px;
+//     line-height: 125px;
+//     position: absolute;
+//     top: 0;
+//   }
+
+//   &:before {
+//     content:"\f10d";
+//   }
+//   &:after {
+//     content: "\f10e";
+//   }
+// }
 
 /* Header */
 .site-branding {
@@ -48,6 +67,7 @@
   & .footer_navigation {
 
     ul {
+
       margin: 1rem 0;
       padding: 0;
       
@@ -70,22 +90,33 @@
 }
 
 /* Front Page */
-.home .site-main {
+.post {
 
-  // @include desktop {
-  //   display: flex;
-  //   margin: 0 auto;
-  // }
-  
-  // .fa-quote {
+  margin-top: 3rem;
 
-  //   display: none;
+  @include desktop {
+    display: flex;
+  }
 
-  //   @include desktop {
-  //     display: normal;
-  //   }
-  // }
+  .fa-quote {
+    display: none;
+    width: 200px;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  .entry-content {
+
+    margin: 0;
+
+    p {
+      margin: 0;
+    }
+  }
 }
+
 
 
 #new-quote-button {
@@ -98,6 +129,17 @@
 
 .fa-quote {
   color: $color__brand-green;
+
+  &:first-of-type {
+    padding-right: 2rem;
+  }
+  &:last-of-type {
+    padding-left: 2rem;
+  }
+
+  & .fa {
+    font-size: 8rem;
+  }
 }
 
 /* All Archives Page */
