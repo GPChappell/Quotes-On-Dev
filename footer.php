@@ -22,7 +22,7 @@
 						);
 					?>
 
-					<p>Brought to you by &copy; <a href="www.redacademy.com">RED Academy</a> <?php echo date( 'Y' ); ?></p>
+					<p class="copyright">Brought to you by &copy; <a href="www.redacademy.com">RED Academy</a> <?php echo date( 'Y' ); ?></p>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

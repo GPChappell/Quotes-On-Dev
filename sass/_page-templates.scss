@@ -1,6 +1,104 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/* General */
+.fixed-width-content-area {
+
+  padding: 2.5%;
+  
+  @include desktop {
+    width: $base__content-area-width;
+    margin: 0 auto;
+  }
+
+}
+
+/* Header */
+.site-branding {
+  margin-top: 3rem;
+}
+  
+.logo {
+  width: 300px;
+
+  @include tablet {
+    width: 500px;
+  }
+
+  @include desktop {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+/* Footer */
+.site-info {
+
+  margin: 4.5rem 0 2rem;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    justify-content: flex-end;
+  }
+
+  & .footer_navigation {
+
+    ul {
+      margin: 1rem 0;
+      padding: 0;
+      
+      li {
+      display: inline-block;
+      padding: 0 1rem;
+      border-right: 1px solid white;
+      line-height: 1;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+
+        &:last-of-type {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+/* Front Page */
+.home .site-main {
+
+  // @include desktop {
+  //   display: flex;
+  //   margin: 0 auto;
+  // }
+  
+  // .fa-quote {
+
+  //   display: none;
+
+  //   @include desktop {
+  //     display: normal;
+  //   }
+  // }
+}
+
+
+#new-quote-button {
+
+  @include desktop {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.fa-quote {
+  color: $color__brand-green;
+}
 
 /* All Archives Page */
 

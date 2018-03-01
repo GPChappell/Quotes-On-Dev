@@ -35,15 +35,16 @@ hr {
 
 ul, ol {
 	margin: 0 0 $base__space-unit ($base__space-unit * 2);
+	list-style: none;
 }
 
-ul {
-	list-style: disc;
-}
+// ul {
+// 	list-style: disc;
+// }
 
-ol {
-	list-style: decimal;
-}
+// ol {
+// 	list-style: decimal;
+// }
 
 li > ul,
 li > ol {

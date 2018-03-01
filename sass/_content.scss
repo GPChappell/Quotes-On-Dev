@@ -31,3 +31,34 @@
 	clear: both;
 	margin: 0 0 $base__space-unit;
 }
+
+.post {
+
+	& .entry-content {
+
+		p {
+			font-size: 1.25rem;
+			// font-weight: 300;
+
+			@include tablet {
+				font-size: 1.75rem;
+			}
+		
+			@include desktop {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	& .entry-title,
+	.source {
+			display: inline-block;
+			font-size: 1.25rem;
+			font-weight: 300;
+		}
+
+	& .source {
+		font-style: italic;
+	}
+	
+}

@@ -11,17 +11,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
-	<?php if( $source && $source_url ) : ?>
+	
+
+	<div class="entry-meta">
+		<?php the_title( '<h2 class="entry-title">&mdash; ', '</h2>' ); ?>
+		<?php if( $source && $source_url ) : ?>
 		<span class="source">
-			<a href="<?php echo $source_url; ?>">
+		, <a href="<?php echo $source_url; ?>">
 				<?php echo $source; ?>
 			</a>
 		</span>
@@ -33,9 +34,6 @@
 			<span class="source"></span>
 
 	<?php endif; ?>
-
-	<div class="entry-meta">
-		<?php the_title( '<h2 class="entry-title">&mdash; ', '</h2>' ); ?>
 	</div> <!--.entry-meta -->
 </article><!-- #post-## -->
 
