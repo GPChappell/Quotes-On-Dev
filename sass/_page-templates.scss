@@ -12,25 +12,36 @@
   }
 }
 
-// .site-content {
+.site-content {
 
-//   &:before,
-//   &:after {
-//     color: $color__brand-green;
-//     font-family: FontAwesome;
-//     font-size: 125px;
-//     line-height: 125px;
-//     position: absolute;
-//     top: 0;
-//   }
+  margin-top: 3rem;
 
-//   &:before {
-//     content:"\f10d";
-//   }
-//   &:after {
-//     content: "\f10e";
-//   }
-// }
+  @include desktop {
+    display: flex;
+    
+    &:before {
+      content: "\f10d";
+      margin-right: 4rem;
+    }
+    &:after {
+      content: "\f10e";
+      margin-left: 4rem;
+    }
+    &:before, 
+    &:after {
+      color: $color__brand-green;
+      font-family: FontAwesome;
+      font-size: 125px;
+    }
+  }
+}
+
+.content-area {
+  width: 100%;
+}
+
+
+
 
 /* Header */
 .site-branding {
@@ -90,35 +101,6 @@
 }
 
 /* Front Page */
-.post {
-
-  margin-top: 3rem;
-
-  @include desktop {
-    display: flex;
-  }
-
-  .fa-quote {
-    display: none;
-    width: 200px;
-
-    @include desktop {
-      display: block;
-    }
-  }
-
-  .entry-content {
-
-    margin: 0;
-
-    p {
-      margin: 0;
-    }
-  }
-}
-
-
-
 #new-quote-button {
 
   @include desktop {
@@ -127,21 +109,50 @@
   }
 }
 
-.fa-quote {
-  color: $color__brand-green;
 
-  &:first-of-type {
-    padding-right: 2rem;
-  }
-  &:last-of-type {
-    padding-left: 2rem;
-  }
 
-  & .fa {
-    font-size: 8rem;
+/* All Archives Page */
+.browse-archives {
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 1.125rem;
+        margin-bottom: 0.5rem;
+
+        @include tablet {
+          font-size: 1.25rem;
+        }
+      }
+    }
+}
+
+/* Category Archive */
+.archive {
+  
+  .entry-content,
+  .page-title {
+    padding-bottom: 2rem;
+    border-bottom: $base__dashed-border;
   }
 }
 
-/* All Archives Page */
-
 /* Submit a Quote Page */
+#quote-submission-form {
+  label {
+    display: block;
+  }
+  input,
+  textarea {
+    margin: 0.5rem 0 1.5rem;
+
+    &:focus,
+    &:active {
+      border: white;
+      background: lightyellow;
+    }
+  }
+}

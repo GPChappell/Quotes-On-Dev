@@ -25,6 +25,7 @@ get_header(); ?>
           </div>
 
           <div>
+          <label for="quote-content">Quote</label>
             <textarea name="quote_content" id="quote-content" cols="20" rows="3"></textarea>
           </div>
 

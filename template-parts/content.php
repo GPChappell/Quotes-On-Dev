@@ -12,8 +12,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="fa-quote"><i class="fa fa-quote-left"></i></div>
-
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<div class="entry-meta">
@@ -34,10 +32,6 @@
 	<?php endif; ?>
 	</div> <!--.entry-meta -->
 	</div><!-- .entry-content -->
-	<div class="fa-quote"><i class="fa fa-quote-right"></i></div>
-
-	
-
 
 </article><!-- #post-## -->
 

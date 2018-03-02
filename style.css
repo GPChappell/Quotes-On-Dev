@@ -395,16 +395,20 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  border: 2px solid #00cc00;
+  border-radius: 2px;
+  background: #222222;
+  color: #00cc00;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.75rem 2.25rem; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #009900; }
 
 input[type="text"],
 input[type="email"],
@@ -629,6 +633,27 @@ object {
       width: 1080px;
       margin: 0 auto; } }
 
+.site-content {
+  margin-top: 3rem; }
+  @media (min-width: 1080px) {
+    .site-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .site-content:before {
+        content: "\f10d";
+        margin-right: 4rem; }
+      .site-content:after {
+        content: "\f10e";
+        margin-left: 4rem; }
+      .site-content:before, .site-content:after {
+        color: #00cc00;
+        font-family: FontAwesome;
+        font-size: 125px; } }
+
+.content-area {
+  width: 100%; }
+
 /* Header */
 .site-branding {
   margin-top: 3rem; }
@@ -672,37 +697,38 @@ object {
         border-right: none; }
 
 /* Front Page */
-.post {
-  margin-top: 3rem; }
-  @media (min-width: 1080px) {
-    .post {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
-  .post .fa-quote {
-    display: none;
-    width: 200px; }
-    @media (min-width: 1080px) {
-      .post .fa-quote {
-        display: block; } }
-  .post .entry-content {
-    margin: 0; }
-    .post .entry-content p {
-      margin: 0; }
-
 @media (min-width: 1080px) {
   #new-quote-button {
     display: block;
     margin: 0 auto; } }
 
-.fa-quote {
-  color: #00cc00; }
-  .fa-quote:first-of-type {
-    padding-right: 2rem; }
-  .fa-quote:last-of-type {
-    padding-left: 2rem; }
-  .fa-quote .fa {
-    font-size: 8rem; }
-
 /* All Archives Page */
+.browse-archives ul {
+  padding: 0;
+  margin: 0; }
+  .browse-archives ul li {
+    display: inline-block;
+    margin-right: 1.125rem;
+    margin-bottom: 0.5rem; }
+    @media (min-width: 620px) {
+      .browse-archives ul li {
+        font-size: 1.25rem; } }
+
+/* Category Archive */
+.archive .entry-content,
+.archive .page-title {
+  padding-bottom: 2rem;
+  border-bottom: 1px dotted #ffffff; }
+
 /* Submit a Quote Page */
+#quote-submission-form label {
+  display: block; }
+
+#quote-submission-form input,
+#quote-submission-form textarea {
+  margin: 0.5rem 0 1.5rem; }
+  #quote-submission-form input:focus, #quote-submission-form input:active,
+  #quote-submission-form textarea:focus,
+  #quote-submission-form textarea:active {
+    border: white;
+    background: lightyellow; }
