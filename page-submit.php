@@ -21,7 +21,7 @@ get_header(); ?>
 
           <div>
             <label for="quote-author">Author of Quote</label>
-            <input type="text" name="quote_author" id="quote_author">
+            <input type="text" name="quote_author" id="quote-author">
           </div>
 
           <div>
@@ -39,7 +39,7 @@ get_header(); ?>
             <input type="url" name="quote_source_url" id="quote-source-url">
           </div>
 
-          <input type="submit" value="Submit Quote">
+          <input id="submit-quote-button" type="submit" value="Submit Quote">
 
         </form>
 

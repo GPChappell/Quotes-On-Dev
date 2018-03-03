@@ -59,3 +59,41 @@
       };
   });
 })(jQuery);
+
+
+(function ($) {
+
+  $('#submit-quote-button').on('click', function (e) {
+    e.preventDefault();
+
+    var quoteAuthor =  $('#quote-author').val();
+    var quoteContent = $('#quote-content').val();
+    var quoteSource = $('#quote-source').val();
+    var quoteSourceURL = $('#quote-source-url').val();
+
+    data = {
+      status: 'pending',
+      title: quoteAuthor,
+      content: quoteContent,
+      _qod_quote_source: quoteSource,
+      _qod_quote_source_url: quoteSourceURL
+    }
+
+    $.ajax({
+      method: 'post',
+      url: api_vars.root_url + 'wp/v2/posts/',
+      data: data,
+      success: function (response) {
+        $('#quote-submission-form').hide('slow');
+        $('.entry-title').after( '<p>'+api_vars.success+'</p>' );
+      },
+      error: function (response) {
+        $('#quote-submission-form').hide('slow');
+        $('.entry-title').after( '<p>'+api_vars.failure+'</p>' );
+      },
+      beforeSend: function (xhr) {
+          xhr.setRequestHeader('X-WP-Nonce', api_vars.nonce);
+      }
+    });
+  });
+})(jQuery);

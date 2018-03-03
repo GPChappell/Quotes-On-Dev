@@ -47,7 +47,7 @@ add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
 function qod_change_title_here_text( $input ) {
     global $post_type;
 
-    if( is_admin && 'post' == $post_type ) {
+    if( is_admin() && 'post' == $post_type ) {
         return 'Enter first and last name of the quoted person here';
     }
 
